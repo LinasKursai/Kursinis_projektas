@@ -18,6 +18,7 @@ public class Driver {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
         options.addArguments("--force-device-scale-factor=0.90");
+        options.addArguments("--disable-notifications");
 
         drivers.set(new ChromeDriver(options));
         drivers.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
