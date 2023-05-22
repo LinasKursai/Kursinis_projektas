@@ -5,6 +5,16 @@ import org.openqa.selenium.By;
 public class Locators {
 
     public static class Zvejys {
+        public static class search {
+
+            public static By inputReelName = By.xpath(
+                    "//div[@class='ty-search-block']//input[@type='text']");
+            public static By clickOnPaieskaButton = By.xpath(
+                    "//div[@class='ty-search-block']//input[@type='submit']");
+            public static By getSearchItemName = By.xpath(
+                    "//div[@class='vs-grid vs-grid-table']//a[@class='product-title']");
+        }
+
         public static class paskyraMenu {
 
             public static By manoPaskyraMenu = By.xpath("//div[@id='sw_dropdown_251']");
@@ -17,7 +27,7 @@ public class Locators {
                     "//div[@id='login_block251']//button[@type='submit']");
             public static By readMessage = By.xpath(
                     "//li[@class='ty-account-info__item ty-dropdown-box__item ty-account-info__name']");
-            public static By readErrorMessage=By.xpath(
+            public static By readErrorMessage = By.xpath(
                     "//div[@class='cm-notification-container notification-container']");
         }
 
