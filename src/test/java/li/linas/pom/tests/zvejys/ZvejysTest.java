@@ -38,5 +38,24 @@ public class ZvejysTest extends TestBase {
                 actualResult.contains(expectedResult),
                 String.format("Actual: %s; Expected: %s", actualResult, expectedResult));
     }
+    @Test
+    public void inputIncorrectLoginInformation() {
+        String messageEmail = "linaskursai@gmail.com";
+        String messagePassword = "password";
+        String expectedResult = "Vartotojo vardas arba slaptažodis yra neteisingi";
+        String actualResult;
 
+        ZvejysPage.clickOnManoPaskyrosMenu();
+        ZvejysPage.clickOnManoPaskyraPrisijungti();
+
+        ZvejysPage.enterEmailAddress(messageEmail);
+        ZvejysPage.enterPassword(messagePassword);
+
+        ZvejysPage.clickOnAccountLoginButton();
+        actualResult = ZvejysPage.readErrorMessage();
+
+        Assert.assertTrue(
+                actualResult.contains(expectedResult),
+                String.format("Actual: %s; Expected: %s", actualResult, expectedResult));
+    }
 }
