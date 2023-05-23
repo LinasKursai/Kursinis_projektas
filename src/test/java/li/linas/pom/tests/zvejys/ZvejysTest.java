@@ -61,6 +61,31 @@ public class ZvejysTest extends TestBase {
     }
 
     @Test
+    public void changeAddressInAccountInfo() {
+        String messageEmail = "linaskursai@gmail.com";
+        String messagePassword = "KursaiTestas1";
+        String address = "Topolis";
+        String expectedResult = "Jūsų profilis sėkmingai atnaujintas.";
+        String actualResult;
+
+        ZvejysPage.clickOnManoPaskyrosMenu();
+        ZvejysPage.clickOnManoPaskyraPrisijungti();
+        ZvejysPage.enterEmailAddress(messageEmail);
+        ZvejysPage.enterPassword(messagePassword);
+        ZvejysPage.clickOnAccountLoginButton();
+        ZvejysPage.clickOnManoPaskyrosMenu();
+        ZvejysPage.clickOnAccountInfo();
+        ZvejysPage.cleanPasswordBox();
+        ZvejysPage.enterAddress(address);
+        ZvejysPage.clickOnSaugotiButton();
+
+        actualResult = ZvejysPage.readAccountInfoChangeMessage();
+        Assert.assertTrue(
+                actualResult.contains(expectedResult),
+                String.format("Actual: %s; Expected: %s", actualResult, expectedResult));
+    }
+
+    @Test
     public void testSearchBox() {
 
         String reelName = "Ritė Daiwa Laguna LT";
@@ -73,6 +98,7 @@ public class ZvejysTest extends TestBase {
         actualResult = ZvejysPage.getItemName();
         Assert.assertEquals(actualResult, expectedResult);
     }
+
     @Test
     public void addItemsToShoppingCartAndCheckList() {
 

@@ -43,7 +43,16 @@ public class Locators {
                     "//li[@class='ty-account-info__item ty-dropdown-box__item ty-account-info__name']");
             public static By readErrorMessage = By.xpath(
                     "//div[@class='cm-notification-container notification-container']");
+            public static By acountInfo = By.xpath("//ul[@class='ty-account-info']/li[2]");
+            public static By inputNewLoginPassword = By.xpath(
+                    "//div[@id='sa']//input[@x-autocompletetype='street-address']");
+            public static By accountSave = By.xpath("//button[@id='save_profile_but']");
+            public static By changeAccountMessage = By.xpath(
+                    "//div[@class='cm-notification-content " +
+                            "notification-content cm-auto-hide alert-success']");
+
         }
+
         public static class Home {
             public static By menuSelectGroup = By.xpath("//ul[@id='vmenu_88']/li[2]");
             public static By menuSelectRitesGroup = By.xpath("//div[@class='owl-item'][1]");

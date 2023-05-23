@@ -86,4 +86,7 @@ public class Common {
         }
         return listOfElementsText;
     }
+    public static void cleanTextBoxElement(By locator) {
+        Driver.getDriver().findElement(locator).clear();
+    }
 }

@@ -106,4 +106,26 @@ public class ZvejysPage {
         }
         return isAvailable;
     }
+
+    public static void clickOnAccountInfo() {
+        Common.clickOnElement(Locators.Zvejys.paskyrosMenu.acountInfo);
+    }
+
+    public static void cleanPasswordBox() {
+        Common.cleanTextBoxElement(Locators.Zvejys.paskyrosMenu.inputNewLoginPassword);
+    }
+
+    public static void enterAddress(String address) {
+
+        Common.sendKeysToElement(Locators.Zvejys.paskyrosMenu.inputNewLoginPassword, address);
+    }
+
+    public static void clickOnSaugotiButton() {
+        Common.clickOnElement(Locators.Zvejys.paskyrosMenu.accountSave);
+    }
+
+    public static String readAccountInfoChangeMessage() {
+        return Common.getTextFromElement(Locators.Zvejys.paskyrosMenu.changeAccountMessage);
+    }
+
 }
