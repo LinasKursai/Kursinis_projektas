@@ -5,6 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Common {
 
     public static void setUpDriver() {
@@ -61,11 +64,26 @@ public class Common {
         actions.moveToElement(getElement(locator)).click().build().perform();
     }
 
+    private static List<WebElement> getElements(By locator) {
+        return Driver.getDriver().findElements(locator);
+    }
+
     public static String getTextFromElement(By locator) {
         return getElement(locator).getText();
     }
 
     public static void clickOnElement(By locator) {
         getElement(locator).click();
+    }
+
+    public static List<String> getTextFromElements(By locator) {
+
+        List<String> listOfElementsText = new ArrayList<>();
+
+        for (WebElement element : getElements(locator)) {
+            element.getText();
+            listOfElementsText.add(element.getText());
+        }
+        return listOfElementsText;
     }
 }
