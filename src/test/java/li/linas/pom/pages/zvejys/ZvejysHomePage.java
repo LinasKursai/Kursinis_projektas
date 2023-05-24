@@ -8,11 +8,9 @@ public class ZvejysHomePage {
         Common.setUpDriver();
         Common.openUrl("https://www.zvejys.lt/");
     }
-
     public static void clickOnPrekiuGrupesRites() {
         Common.clickOnPrekiuGrupeRites(Locators.Zvejys.Home.menuSelectGroup);
     }
-
     public static void clickOnRitesSpiningavimui() {
         Common.clickOnRitesSpiningavimui(Locators.Zvejys.Home.menuSelectRitesGroup);
     }
