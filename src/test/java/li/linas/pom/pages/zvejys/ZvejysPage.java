@@ -32,6 +32,7 @@ public class ZvejysPage {
     }
 
     public static String readErrorMessage() {
+        Common.waitForElementToBeVisible(Locators.Zvejys.paskyrosMenu.readErrorMessage);
         return Common.getTextFromElement(Locators.Zvejys.paskyrosMenu.readErrorMessage);
     }
 
