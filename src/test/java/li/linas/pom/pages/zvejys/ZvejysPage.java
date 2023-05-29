@@ -7,91 +7,63 @@ import li.linas.pom.pages.Locators;
 import java.util.List;
 
 public class ZvejysPage {
-    public static void clickOnManoPaskyrosMenu() {
-        Common.clickOnManoPaskyraByAction(Locators.Zvejys.paskyrosMenu.manoPaskyraMenu);
-    }
-
-    public static void clickOnManoPaskyraPrisijungti() {
-        Common.clickOnManoPaskyraPrisijungtiByAction(Locators.Zvejys.paskyrosMenu.manoPaskyraMenuPrisijungti);
-    }
-
-    public static void enterEmailAddress(String messageEmail) {
-        Common.sendKeysToElement(Locators.Zvejys.paskyrosMenu.inputLoginEmail, messageEmail);
-    }
-
-    public static void enterPassword(String password) {
-        Common.sendKeysToElement(Locators.Zvejys.paskyrosMenu.inputLoginPassword, password);
-    }
-
-    public static void clickOnAccountLoginButton() {
-        Common.clickOnManoPaskyraPrisijungtiButtonByAction(Locators.Zvejys.paskyrosMenu.manoPaskyraPrisijungtiButton);
-    }
-
-    public static String readConnectedAccountEmail() {
-        return Common.getTextFromElement(Locators.Zvejys.paskyrosMenu.readMessage);
-    }
-
-    public static String readErrorMessage() {
-        Common.waitForElementToBeVisible(Locators.Zvejys.paskyrosMenu.readErrorMessage);
-        return Common.getTextFromElement(Locators.Zvejys.paskyrosMenu.readErrorMessage);
-    }
 
     public static void enterReelNameToSearchBox(String reelName) {
-        Common.sendKeysToElement(Locators.Zvejys.reelPage.inputReelName, reelName);
+        Common.sendKeysToElement(Locators.Zvejys.reelPage.reelNameinput, reelName);
     }
 
     public static void clickOnPaieskaButton() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.clickOnPaieskaButton);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonClickOnPaieska);
     }
 
     public static String getItemName() {
         return Common.getTextFromElement(
-                Locators.Zvejys.reelPage.getSearchItemName
+                Locators.Zvejys.reelPage.ButtonSearchItemName
         );
     }
 
     public static void clickOnReelDamItem() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.selectReelDam);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSelectReelDam);
     }
 
     public static void clickOnReelDamItemToCart() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.selectReelDamToCart);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSelectReelDamToCart);
     }
 
     public static void clickNotificationClose() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.closeNotificationShipingCart);
+        Common.clickOnElement(Locators.Zvejys.reelPage.notificationCloseShipingCart);
     }
 
     public static void clickOnRitesSpiningavimui() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.switchToSpiningavimuiMenu);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSwitchToSpiningavimuiMenu);
     }
 
     public static void clickOnMeskeres() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.switchToMeskeres);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSwitchToMeskeres);
     }
 
     public static void clickOnMeskeresUpems() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.switchToMeskeresUpems);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSwitchToMeskeresUpems);
     }
 
     public static void clickOnSpiningavimui() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.switchToMeskeresSpiningavimui);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSwitchToMeskeresSpiningavimui);
     }
 
     public static void clinkOnSpiningai() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.switchToSpiningai);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSwitchToSpiningai);
     }
 
     public static void clickOnAddToCart() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.switchToAddToCart);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSwitchToAddToCart);
     }
 
     public static void clickOnManoKrepselisButton() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.selectManokrepselisButton);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSelectManokrepselisButton);
     }
 
     public static void clickOnRodytiKrepseliButton() {
-        Common.clickOnElement(Locators.Zvejys.reelPage.selectRodytiManokrepselisButton);
+        Common.clickOnElement(Locators.Zvejys.reelPage.buttonSelectRodytiManokrepselisButton);
     }
 
     public static boolean checkShoppingCart(boolean isAvailable, List<String> selectValues) {
@@ -107,26 +79,4 @@ public class ZvejysPage {
         }
         return isAvailable;
     }
-
-    public static void clickOnAccountInfo() {
-        Common.clickOnElement(Locators.Zvejys.paskyrosMenu.acountInfo);
-    }
-
-    public static void cleanPasswordBox() {
-        Common.cleanTextBoxElement(Locators.Zvejys.paskyrosMenu.inputNewLoginPassword);
-    }
-
-    public static void enterAddress(String address) {
-
-        Common.sendKeysToElement(Locators.Zvejys.paskyrosMenu.inputNewLoginPassword, address);
-    }
-
-    public static void clickOnSaugotiButton() {
-        Common.clickOnElement(Locators.Zvejys.paskyrosMenu.accountSave);
-    }
-
-    public static String readAccountInfoChangeMessage() {
-        return Common.getTextFromElement(Locators.Zvejys.paskyrosMenu.changeAccountMessage);
-    }
-
 }

@@ -19,73 +19,7 @@ public class ZvejysTest extends TestBase {
         ZvejysHomePage.clickOnPrekiuGrupesRites();
         ZvejysHomePage.clickOnRitesSpiningavimui();
     }
-
-    @Test
-    public void inputCorrectLoginInformation() {
-        String messageEmail = "linaskursai@gmail.com";
-        String messagePassword = "KursaiTestas1";
-
-        String expectedResult = "linaskursai@gmail.com";
-        String actualResult;
-
-        ZvejysPage.clickOnManoPaskyrosMenu();
-        ZvejysPage.clickOnManoPaskyraPrisijungti();
-        ZvejysPage.enterEmailAddress(messageEmail);
-        ZvejysPage.enterPassword(messagePassword);
-        ZvejysPage.clickOnAccountLoginButton();
-        ZvejysPage.clickOnManoPaskyrosMenu();
-        actualResult = ZvejysPage.readConnectedAccountEmail();
-
-        Assert.assertTrue(
-                actualResult.contains(expectedResult),
-                String.format("Actual: %s; Expected: %s", actualResult, expectedResult));
-    }
-
-    @Test
-    public void inputIncorrectLoginInformation() {
-        String messageEmail = "linaskursai@gmail.com";
-        String messagePassword = "password";
-        String expectedResult = "Vartotojo vardas arba slaptažodis yra neteisingi";
-        String actualResult;
-
-        ZvejysPage.clickOnManoPaskyrosMenu();
-        ZvejysPage.clickOnManoPaskyraPrisijungti();
-        ZvejysPage.enterEmailAddress(messageEmail);
-        ZvejysPage.enterPassword(messagePassword);
-        ZvejysPage.clickOnAccountLoginButton();
-        actualResult = ZvejysPage.readErrorMessage();
-
-        Assert.assertTrue(
-                actualResult.contains(expectedResult),
-                String.format("Actual: %s; Expected: %s", actualResult, expectedResult));
-    }
-
-    @Test
-    public void changeAddressInAccountInfo() {
-        String messageEmail = "linaskursai@gmail.com";
-        String messagePassword = "KursaiTestas1";
-        String address = "Topolis";
-        String expectedResult = "Jūsų profilis sėkmingai atnaujintas.";
-        String actualResult;
-
-        ZvejysPage.clickOnManoPaskyrosMenu();
-        ZvejysPage.clickOnManoPaskyraPrisijungti();
-        ZvejysPage.enterEmailAddress(messageEmail);
-        ZvejysPage.enterPassword(messagePassword);
-        ZvejysPage.clickOnAccountLoginButton();
-        ZvejysPage.clickOnManoPaskyrosMenu();
-        ZvejysPage.clickOnAccountInfo();
-        ZvejysPage.cleanPasswordBox();
-        ZvejysPage.enterAddress(address);
-        ZvejysPage.clickOnSaugotiButton();
-
-        actualResult = ZvejysPage.readAccountInfoChangeMessage();
-        Assert.assertTrue(
-                actualResult.contains(expectedResult),
-                String.format("Actual: %s; Expected: %s", actualResult, expectedResult));
-    }
-
-    @Test
+        @Test
     public void testSearchBox() {
 
         String reelName = "Ritė Daiwa Laguna LT";
@@ -114,7 +48,6 @@ public class ZvejysTest extends TestBase {
         ZvejysPage.clickNotificationClose();
         ZvejysPage.clickOnManoKrepselisButton();
         ZvejysPage.clickOnRodytiKrepseliButton();
-        Common.sleep(2000);
 
         boolean isAvailable = true;
         boolean expectedResult = true;
