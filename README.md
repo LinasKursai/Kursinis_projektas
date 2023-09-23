@@ -5,7 +5,7 @@
 
 
 ## Tests:
-
+Google Chrome Version 114.0.5735.134 is used
 
 1. Try logging in using valid email and password:
 * click button "MANO PASKYRA";
