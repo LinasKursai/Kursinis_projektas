@@ -53,7 +53,7 @@ public class ZvejysTest extends TestBase {
         boolean expectedResult = true;
         boolean actualResult;
         List<String> selectValues = Arrays.asList(
-                "Shimano Technium DF BX CAST 240cm 15-40g", "Ritė DAM Quick Fighter Pro FD su valu");
+                "Shimano Technium DF BX CAST 240cm 15-40g", "Ritė DAM Quick 1 RD 3+1BB");
 
         actualResult = ZvejysPage.checkShoppingCart(isAvailable, selectValues);
         Assert.assertEquals(actualResult, expectedResult);

@@ -13,8 +13,8 @@ public class Locators {
             public static By ButtonSearchItemName = By.xpath(
                     "//div[@class='vs-grid vs-grid-table']//a[@class='product-title']");
             public static By buttonSelectReelDam = By.xpath(
-                    "//div[@id='category_products_2']//a[contains(text(),'DAM Quick Fighter Pro FD')]");
-            public static By buttonSelectReelDamToCart = By.xpath("//a[@id='button_cart_1036243']");
+                    "//div[@id='category_products_2']//a[contains(text(),'DAM Quick 1 RD 3+1BB')]");
+            public static By buttonSelectReelDamToCart = By.xpath("//a[@id='button_cart_1034489']");
             public static By notificationCloseShipingCart = By.xpath(
                     "//span[@class='cm-notification-close close']");
             public static By buttonSwitchToSpiningavimuiMenu = By.xpath("//a[@class='ty-breadcrumbs__a'][3]");

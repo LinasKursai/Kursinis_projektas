@@ -11,7 +11,7 @@ public class Driver {
     private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
 
     public static void setDriver() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().driverVersion("117.0.5938.149").setup();
         System.setProperty("webdriver.http.factory", "jdk-http-client");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
