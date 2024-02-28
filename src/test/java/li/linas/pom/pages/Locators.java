@@ -22,8 +22,8 @@ public class Locators {
             public static By buttonSwitchToMeskeresUpems = By.xpath("//div[@id='scroll_list_2']//a[1]");
             public static By buttonSwitchToMeskeresSpiningavimui = By.xpath(
                     "//div[@class='owl-wrapper-outer']/div/div[1]/div/div[2]/a");
-            public static By buttonSwitchToSpiningai = By.xpath("//div[@id='scroll_list_2']/div[1]/div/div[2]");
-            public static By buttonSwitchToAddToCart = By.xpath("//i[@class='vs-icon-grid-add-to-cart']");
+            public static By buttonSwitchToSpiningai = By.xpath("//div[@id='scroll_list_2']/div[1]/div/div[4]");
+            public static By buttonSwitchToAddToCart = By.xpath("//*[@id='button_cart_1037950']/i");
             public static By buttonSelectManokrepselisButton = By.xpath("//span[@class='minicart-title hand']");
             public static By buttonSelectRodytiManokrepselisButton = By.xpath("//a[@class='view-cart']");
             public static By shoppingCart = By.xpath("//div[@id='cart_items']//tbody/tr/td[2]//a[1]");

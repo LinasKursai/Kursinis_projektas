@@ -11,13 +11,13 @@ public class Driver {
     private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
 
     public static void setDriver() {
-        WebDriverManager.chromedriver().driverVersion("120.0.6099.109").setup();
+        WebDriverManager.chromedriver().driverVersion("122.0.6261.94").setup();
         System.setProperty("webdriver.http.factory", "jdk-http-client");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
         options.addArguments("--force-device-scale-factor=0.90");
         options.addArguments("--disable-notifications");
-        options.addArguments("--headless=new");
+        //options.addArguments("--headless=new");
 
         drivers.set(new ChromeDriver(options));
         drivers.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
